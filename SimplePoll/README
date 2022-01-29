@@ -1,0 +1,75 @@
+ Simple Poll :: Copyright (C) 2011  Free-PHP.Net
+ http://free-php.net (see LICENSE-GPLv3)
+
+ # Link to Us / Donate
+   -- If you use our script, please consider linking back or donating. Thx!
+   -- http://www.free-php.net
+ 
+ # Feedback / suggestions can be directed to the following page...
+   Visit --> http://www.free-php.net/622/
+   
+ # Requirements
+
+ -- PHP 5+ (http://www.php.net)
+ -- MySQL+ (http://www.mysql.com)
+
+ # MySQL Database Setup
+
+ -- Open sql.txt in the main Simple Poll folder.
+ -- Paste the contents into a tool that can execute SQL commands for your MySQL DB
+
+ # Installation
+
+ -- NOTE: You may want to limit access to your script admin directory by using
+    .htaccess or other methods.
+
+ -- Follow the MySQL Database Setup Before Continuing
+ -- Open config.inc.php in the root folder and modify the settings for your server
+ -- Upload to your server
+
+ # How to Use Simple Poll
+
+ -- Simple Poll Admin Instructions
+
+    1. Goto http://domain/to/dir/admin/index.php to setup your polls
+    2. There you will be able to view, add, modify and delete polls
+
+ -- Simple Poll can be used on your site using the following
+    (example.php can get you started - includes everything needed)
+
+    1. First, you will need the css/default.css, js/jquery-1.5.2.min.js,
+       js/jquery.formerize-0.1.js, and js/simplepoll.js files included in the
+       head of your html documents that use the below include file.
+       
+    2. PHP include statement. Change "pollid" to the poll you wish to display
+       This code is also displayed for each poll in your admin area for you to
+       copy and paste.
+
+       a. <?php $pollid = 3; include("simplepoll.php"); ?>
+
+    3. Layout / Style can be modified in css/default.css to make your polls
+       look more like your website.
+       
+ # TROUBLE SHOOTING
+
+ -- Make sure that you have created the require 2 database tables (poll,choices)
+ -- Make sure all require / include paths are correct in each file use full
+    paths if necessary.
+ 
+  # Version Info
+
+ -- v1.3
+ ---- Re-write to get rid of old templating styles, and use jquery / ajax to
+      modernize poll display, etc.
+
+ -- v1.2
+ ---- Vote wasn't registering default choice if you clicked vote without changing your vote first
+ ---- Modified to allow multiple polls per page, just copy same tag over and change the pollid
+  
+ -- v1.1
+ ---- Changed cookie management to not depend on register_globals
+ ---- Changed code to not depend on register_globals being set
+ ---- Made script more efficient
+
+ -- v1.0
+ ---- Initial Creation
